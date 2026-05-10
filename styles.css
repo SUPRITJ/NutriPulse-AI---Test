@@ -1,0 +1,27 @@
+:root{--bg:#f6f8fb;--card:#ffffff;--accent:#2b9bd7;--muted:#6b7280;--danger:#e11d48}
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Roboto,system-ui,-apple-system,'Helvetica Neue',Arial}
+body{margin:0;background:var(--bg);color:#111}
+.site-header{background:linear-gradient(90deg,#1e3a8a,#2b9bd7);color:#fff;padding:18px 20px}
+.site-header h1{margin:0;font-size:20px}
+.container{display:flex;gap:16px;padding:18px}
+.left{flex:1;min-width:320px}
+.right{width:380px}
+.card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 20px rgba(20,20,40,0.06);margin-bottom:14px}
+.card h2{margin:0 0 8px 0;font-size:16px}
+form input, form select{width:100%;padding:8px;margin:6px 0;border:1px solid #e6e9ef;border-radius:6px}
+form label{display:block;margin:6px 0;font-size:13px;color:var(--muted)}
+form button{background:var(--accent);color:#fff;border:0;padding:8px 12px;border-radius:6px;cursor:pointer}
+.two-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.dash-item{background:#fafcff;padding:10px;border-radius:8px;text-align:center}
+.dash-item h3{margin:0;font-size:13px;color:var(--muted)}
+#nutrition-score,#gut-health,#obesity-risk,#diabetes-risk{font-weight:700;font-size:18px;margin-top:6px}
+.chat-log{height:200px;overflow:auto;border:1px dashed #eef2ff;padding:8px;border-radius:8px;background:#fbfdff}
+.chat-log .msg{margin:6px 0;padding:8px;border-radius:8px}
+.chat-log .user{background:#e6f5ff;text-align:right}
+.chat-log .bot{background:#f1f5f9}
+#entries{max-height:220px;overflow:auto}
+.entry{padding:8px;border-bottom:1px solid #f1f3f5;display:flex;justify-content:space-between;align-items:center}
+.danger{background:transparent;color:var(--danger);border:1px solid #fde2e8;padding:8px}
+.site-footer{padding:12px;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:900px){.container{flex-direction:column}.right{width:100%}}
