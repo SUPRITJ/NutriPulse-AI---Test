@@ -3,114 +3,44 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>NutriPulse AI — Day 1</title>
+  <title>NutriPulse AI — Home</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <h1 style="margin:0;font-size:20px">NutriPulse AI</h1>
-      <nav style="font-size:14px">
-        <a href="home.html" style="color:rgba(255,255,255,0.9);margin-right:12px">Home</a>
-        <a href="index.html" style="color:rgba(255,255,255,0.9)">Demo</a>
-      </nav>
-    </div>
-    <p>Intelligent Nutrition & Preventive Healthcare — Day 1</p>
+    <h1>NutriPulse AI</h1>
+    <p>Intelligent Nutrition & Preventive Healthcare</p>
   </header>
 
-  <main class="container">
-    <section class="left">
-      <div class="card">
-        <h2>Log Meal</h2>
-        <form id="meal-form">
-          <input name="name" placeholder="Meal name (e.g., Breakfast)" required />
-          <input name="calories" type="number" placeholder="Calories" required />
-          <input name="protein" type="number" placeholder="Protein (g)" />
-          <input name="carbs" type="number" placeholder="Carbs (g)" />
-          <input name="fat" type="number" placeholder="Fat (g)" />
-          <input name="fiber" type="number" placeholder="Fiber (g)" />
-          <label><input type="checkbox" name="fruit"> Contains fruit/veg</label>
-          <label><input type="checkbox" name="probiotic"> Probiotic food</label>
-          <button type="submit">Add Meal</button>
-        </form>
-      </div>
+  <main class="container" style="max-width:980px;margin:24px auto;">
+    <div class="card">
+      <h2>Welcome to NutriPulse AI (Day 1)</h2>
+      <p>NutriPulse AI is a smart web application that helps you understand how your daily nutrition and lifestyle choices impact long-term health. This interactive demo (Day 1) focuses on local logging, simple analysis, and an approachable chatbot for basic wellness guidance.</p>
 
-      <div class="card two-cols">
-        <div>
-          <h2>Water</h2>
-          <form id="water-form">
-            <input name="ml" type="number" placeholder="ml consumed" required />
-            <button>Add</button>
-          </form>
-        </div>
-        <div>
-          <h2>Sleep</h2>
-          <form id="sleep-form">
-            <input name="hours" type="number" step="0.25" placeholder="hours" required />
-            <button>Add</button>
-          </form>
-        </div>
-      </div>
+      <h3>Core features demonstrated</h3>
+      <ul>
+        <li>Log meals, water intake, sleep, and activity—all stored locally in your browser.</li>
+        <li>A simple health dashboard with a heuristic nutrition score, gut health status, and basic risk indicators for obesity and diabetes.</li>
+        <li>An integrated rule-based AI chatbot that answers common nutrition and wellness questions.</li>
+      </ul>
 
-      <div class="card">
-        <h2>Activity</h2>
-        <form id="activity-form">
-          <input name="type" placeholder="Activity (e.g., Walking)" required />
-          <input name="minutes" type="number" placeholder="Minutes" required />
-          <select name="intensity">
-            <option value="low">Low</option>
-            <option value="moderate" selected>Moderate</option>
-            <option value="high">High</option>
-          </select>
-          <button>Add</button>
-        </form>
-      </div>
+      <h3>How it works</h3>
+      <p>The demo runs entirely in the browser. Data is saved to <strong>localStorage</strong>, and a set of lightweight heuristics compute the dashboard values. This is a Day 1 prototype—intended to show interactions, UX, and simple analysis before connecting to a backend and real AI models.</p>
 
-      <div class="card">
-        <h2>Entries</h2>
-        <div id="entries"></div>
-        <button id="clear-data" class="danger">Clear All</button>
-      </div>
-    </section>
+      <h3>Tech & next steps</h3>
+      <p>Planned full app stack: a Python backend and MongoDB for storage, with AI/analytics components to provide personalized recommendations and risk predictions. Next steps after Day 1 include server integration, improved analytics, and richer chatbot experience.</p>
 
-    <aside class="right">
-      <div class="card dashboard">
-        <h2>Health Dashboard</h2>
-        <div class="dash-grid">
-          <div class="dash-item">
-            <h3>Nutrition Score</h3>
-            <div id="nutrition-score">—</div>
-          </div>
-          <div class="dash-item">
-            <h3>Gut Health</h3>
-            <div id="gut-health">—</div>
-          </div>
-          <div class="dash-item">
-            <h3>Obesity Risk</h3>
-            <div id="obesity-risk">—</div>
-          </div>
-          <div class="dash-item">
-            <h3>Diabetes Risk</h3>
-            <div id="diabetes-risk">—</div>
-          </div>
-        </div>
-      </div>
+      <p style="margin-top:18px"><a class="btn" href="home.html">Open Interactive Demo</a></p>
+    </div>
 
-      <div class="card chatbot">
-        <h2>AI Chatbot</h2>
-        <div id="chat-log" class="chat-log"></div>
-        <form id="chat-form">
-          <input id="chat-input" placeholder="Ask about nutrition or wellness" autocomplete="off" />
-          <button>Send</button>
-        </form>
-      </div>
-    </aside>
+    <div class="card">
+      <h3>Privacy note</h3>
+      <p>This demo stores data locally in your browser only. No information is sent to a remote server.</p>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <small>NutriPulse AI — interactive demo (Day 1). Data stored locally in browser.</small>
+    <small>NutriPulse AI — Day 1 prototype</small>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
